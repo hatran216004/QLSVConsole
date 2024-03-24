@@ -1,0 +1,14 @@
+C:\Users\ADMIN\OneDrive\Documents\Files\C#\QuanLiSinhVien\QuanLiSinhVien\bin\Debug\QuanLiSinhVien.exe.config
+C:\Users\ADMIN\OneDrive\Documents\Files\C#\QuanLiSinhVien\QuanLiSinhVien\bin\Debug\QuanLiSinhVien.exe
+C:\Users\ADMIN\OneDrive\Documents\Files\C#\QuanLiSinhVien\QuanLiSinhVien\bin\Debug\QuanLiSinhVien.pdb
+C:\Users\ADMIN\OneDrive\Documents\Files\C#\QuanLiSinhVien\QuanLiSinhVien\obj\Debug\QuanLiSinhVien.csproj.AssemblyReference.cache
+C:\Users\ADMIN\OneDrive\Documents\Files\C#\QuanLiSinhVien\QuanLiSinhVien\obj\Debug\QuanLiSinhVien.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\OneDrive\Documents\Files\C#\QuanLiSinhVien\QuanLiSinhVien\obj\Debug\QuanLiSinhVien.exe
+C:\Users\ADMIN\OneDrive\Documents\Files\C#\QuanLiSinhVien\QuanLiSinhVien\obj\Debug\QuanLiSinhVien.pdb
+C:\Users\ADMIN\OneDrive\Documents\Project_school\C#\QuanLiSinhVien\QuanLiSinhVien\bin\Debug\QuanLiSinhVien.exe.config
+C:\Users\ADMIN\OneDrive\Documents\Project_school\C#\QuanLiSinhVien\QuanLiSinhVien\bin\Debug\QuanLiSinhVien.exe
+C:\Users\ADMIN\OneDrive\Documents\Project_school\C#\QuanLiSinhVien\QuanLiSinhVien\bin\Debug\QuanLiSinhVien.pdb
+C:\Users\ADMIN\OneDrive\Documents\Project_school\C#\QuanLiSinhVien\QuanLiSinhVien\obj\Debug\QuanLiSinhVien.csproj.AssemblyReference.cache
+C:\Users\ADMIN\OneDrive\Documents\Project_school\C#\QuanLiSinhVien\QuanLiSinhVien\obj\Debug\QuanLiSinhVien.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\OneDrive\Documents\Project_school\C#\QuanLiSinhVien\QuanLiSinhVien\obj\Debug\QuanLiSinhVien.exe
+C:\Users\ADMIN\OneDrive\Documents\Project_school\C#\QuanLiSinhVien\QuanLiSinhVien\obj\Debug\QuanLiSinhVien.pdb
