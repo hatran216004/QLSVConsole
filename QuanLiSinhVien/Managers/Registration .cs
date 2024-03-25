@@ -43,7 +43,7 @@ namespace QuanLiSinhVien.Managers
                     Console.WriteLine("Ma mon hoc\t\tTen mon hoc");
                     foreach (var course in courses)
                     {
-                        Console.WriteLine("{0}\t\t{1}", course.MaMonHoc1, course.TenMonHoc1);
+                        Console.WriteLine("{0}\t\t\t{1}", course.MaMonHoc1, course.TenMonHoc1);
                     }
                     return;
                 }

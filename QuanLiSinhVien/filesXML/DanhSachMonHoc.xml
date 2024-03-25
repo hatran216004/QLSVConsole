@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DSMonHoc>
+	<MonHoc>
+		<TenMonHoc>ReactJS</TenMonHoc>
+		<MaMonHoc>C001</MaMonHoc>
+	</MonHoc>
+	
+	<MonHoc>
+		<TenMonHoc>AngularJS</TenMonHoc>
+		<MaMonHoc>C001</MaMonHoc>
+	</MonHoc>
+	
+	<MonHoc>
+		<TenMonHoc>VueJS</TenMonHoc>
+		<MaMonHoc>C001</MaMonHoc>
+	</MonHoc>
+	
+	<MonHoc>
+		<TenMonHoc>MongoDB</TenMonHoc>
+		<MaMonHoc>D001</MaMonHoc>
+	</MonHoc>
+
+	<MonHoc>
+		<TenMonHoc>MySQL</TenMonHoc>
+		<MaMonHoc>D001</MaMonHoc>
+	</MonHoc>
+	
+	<MonHoc>
+		<TenMonHoc>HTML CSS</TenMonHoc>
+		<MaMonHoc>A001</MaMonHoc>
+	</MonHoc>
+
+	<MonHoc>
+		<TenMonHoc>Node and ExpressJS</TenMonHoc>
+		<MaMonHoc>B001</MaMonHoc>
+	</MonHoc>
+</DSMonHoc>

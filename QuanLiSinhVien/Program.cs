@@ -12,13 +12,20 @@ namespace QuanLiSinhVien
     {
         static void Main(string[] args)
         {
+            //SinhVien student1 = new SinhVien("Nguyen Van Teo", "Nam", 19, "SV001", "CNTT", "DHTH01", 9);
+            ManagerSinhVien ds = new ManagerSinhVien();
+            ds.DocFileDSSV("C:\\Users\\ADMIN\\OneDrive\\Documents\\Project_school\\C#\\QuanLiSinhVien\\QuanLiSinhVien\\filesXML\\DanhSachSinhVien.xml");
+            ManagerCourses courses = new ManagerCourses();
+            courses.DocFileDSMonHoc("C:\\Users\\ADMIN\\OneDrive\\Documents\\Project_school\\C#\\QuanLiSinhVien\\QuanLiSinhVien\\filesXML\\DanhSachMonHoc.xml");
+
             int options;
             do
             {
                 Console.WriteLine("\n------------------ Menu ------------------\n");
-                Console.WriteLine("1. Doc va xuat danh sach sinh vien");
+                Console.WriteLine("1. Xuat danh sach sinh vien");
                 Console.WriteLine("2. Dang ki mon hoc");
                 Console.WriteLine("3. Xuat danh sach mon hoc sinh vien da dang ki");
+                Console.WriteLine("4. Huy dang ki mon hoc");
                 Console.WriteLine("\n------------------ End ------------------\n");
                 Console.Write("Nhap lua chon: ");
                 options = int.Parse(Console.ReadLine());
@@ -27,55 +34,68 @@ namespace QuanLiSinhVien
                 {
                     case 1:
                         {
-                            ManagerSinhVien ds = new ManagerSinhVien();
-                            ds.DocFileDSSV("C:\\Users\\ADMIN\\OneDrive\\Documents\\Project_school\\C#\\QuanLiSinhVien\\QuanLiSinhVien\\filesXML\\DanhSachSinhVien.xml");
                             ds.XuatDSSinhVien();
                             break;
                         }
                     case 2:
                         {
-                            SinhVien student = new SinhVien();
-                            Course course = new Course();
+                            string mssv;
+                            Console.Write("Nhap ma so sinh vien can dang ky: ");
+                            mssv = Console.ReadLine();
 
-                            Console.WriteLine("\n----------------- Nhap thong tin mon hoc muon dang ki -----------------\n");
-                            course.NhapTTMonHoc();
-                            Console.Write("Ma so sinh vien: ");
-                            student.MSSV1 = Console.ReadLine();
-                            Console.Write("Ma ten sinh vien: ");
-                            student.Ten1 = Console.ReadLine();
-                            Registration.RegisterCourse(student, course);
+                            ManagerCourses newCourses = new ManagerCourses();
+                            newCourses.XuatDanhSachMonHoc();
+                            string selectedCourse;
+                            bool checkCourse = false;
+                            bool checkSV = false;
 
-                            Console.WriteLine("Dang ky thanh cong!");
+                            foreach(SinhVien sv in ds.ListSV)
+                            {
+                                if(mssv == sv.MSSV1)
+                                {
+                                    checkSV = true;
+                                    Console.Write("\nNhap ten mon hoc can dang ky: ");
+                                    selectedCourse = Console.ReadLine();
+
+                                    foreach (Course course in ManagerCourses.ListCourse)
+                                    {
+                                        if (course.TenMonHoc1 == selectedCourse)
+                                        {
+                                            checkCourse = true;
+                                            Registration.RegisterCourse(sv, course);
+                                        }
+                                    }
+
+                                    if (checkCourse == false)
+                                    {
+                                        Console.WriteLine("Mon hoc khong ton tai!");
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Dang ky thanh cong!");
+                                    }
+                                }
+                            }
+
+                            if (checkSV == false)
+                            {
+                                Console.WriteLine("Ma sinh vien khong ton tai!");
+                            }
 
                             break;
                         }
                     case 3:
                         {
-                            SinhVien student1 = new SinhVien("Nguyen Van A", "Nam", 19, "SV001", "CNTT", "DHTH01", 9);
-                            SinhVien student2 = new SinhVien("Nguyen Van B", "Nam", 18, "SV002", "CNTT", "DHTH01", 8);
-
-                            Course course1 = new Course("C001", "Programming");
-                            Course course2 = new Course("C002", "Database");
-                            Course course3 = new Course("C003", "Web Development");
-
-                            Registration.RegisterCourse(student1, course1);
-                            Registration.RegisterCourse(student1, course2);
-                            Registration.RegisterCourse(student2, course2);
-                            Registration.RegisterCourse(student2, course3);
-
-                            // In danh sách môn học đã đăng ký cho một sinh viên cụ thể
-                            Registration.InDanhSachMHDangKy("SV001");
-
-                            // In danh sách môn học đã đăng ký cho một sinh viên không tồn tại
-                            //Registration.InDanhSachMHDangKy("SV002");
-
+                            string mssv;
+                            Console.Write("Nhap ma so sinh vien: ");
+                            mssv = Console.ReadLine();
+                            Registration.InDanhSachMHDangKy(mssv);
                             break;
                         }
                     default:
                         break;
                 }
             } while (true);
-
 
             Console.ReadLine();
         }
