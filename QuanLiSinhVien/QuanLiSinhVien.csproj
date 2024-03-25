@@ -46,6 +46,7 @@
     <Compile Include="Classes\KHOA.cs" />
     <Compile Include="Classes\LOP.cs" />
     <Compile Include="Classes\NIENKHOA.cs" />
+    <Compile Include="Classes\PERSON.cs" />
     <Compile Include="Managers\ManagerLOP.cs" />
     <Compile Include="Managers\ManagerKHOA.cs" />
     <Compile Include="Managers\ManagerNIENKHOA.cs" />

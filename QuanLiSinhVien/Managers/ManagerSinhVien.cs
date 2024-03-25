@@ -30,6 +30,8 @@ namespace QuanLiSinhVien.Managers
             string MaNghanh;
             string HoTen;
             string GioiTinh;
+            string DiaChi;
+            int Tuoi;
             SinhVien sv;
 
             do
@@ -54,7 +56,13 @@ namespace QuanLiSinhVien.Managers
             Console.Write("Nhap ma nganh: ");
             MaNghanh = Console.ReadLine();
 
-            sv = new SinhVien(MSSV, MaNghanh, MaLop, HoTen, GioiTinh);
+            Console.Write("Nhap dia chi: ");
+            DiaChi = Console.ReadLine();
+
+            Console.Write("Nhap ma nganh: ");
+            Tuoi = int.Parse(Console.ReadLine());
+
+            sv = new SinhVien(HoTen, DiaChi, GioiTinh, Tuoi, MSSV, MaNghanh, MaLop);
             ListSV.Add(sv);
 
             if (ManagerLOP.CheckLop(MaLop) != null)
@@ -83,6 +91,7 @@ namespace QuanLiSinhVien.Managers
                 else
                 {
                     ListSV.Remove(sv);
+                    lop.ListSV1.Remove(sv);
                     Console.WriteLine("Xoa sinh vien thanh cong!");
                 }
             } while (sv == null);
@@ -93,11 +102,11 @@ namespace QuanLiSinhVien.Managers
         {
             int check = 0;
             Console.WriteLine("Ten lop: {0}", lop.TenLop1);
-            Console.WriteLine("MSSV\t|\tMa nghanh\t|\tHo ten\t|\tGioi tinh\t|\tMa lop\t|");
+            Console.WriteLine("MSSV\t|\tMa nghanh\t|\tHo ten\t|\tGioi tinh\t|\tMa lop\t|\tDia chi\t|\tTuoi|");
             foreach (SinhVien sv in lop.ListSV1)
             {
                 check++;
-                Console.WriteLine("{0}\t|\t{1}\t|\t{2}\t|\t{3}\t|\t{4}\t|", sv.MSSV1, sv.MaNghanh1, sv.HoTen1, sv.GioiTinh1, lop.MaLop1);
+                Console.WriteLine("{0}\t|\t{1}\t|\t{2}\t|\t{3}\t|\t{4}\t|\t{5}\t|\t{6}|", sv.MSSV1, sv.MaNghanh1, sv.Ten1, sv.GioiTinh1, lop.MaLop1, sv.DiaChi1, sv.Tuoi1);
             }
             if (check == 0)
             {
