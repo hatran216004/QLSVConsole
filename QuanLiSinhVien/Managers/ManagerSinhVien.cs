@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace QuanLiSinhVien.Managers
 {
     class ManagerSinhVien
     {
         //  Biến tĩnh list sv lưu các obj SinhVien
-        public static List<SinhVien> ListSV = new List<SinhVien>();
-        public static SinhVien CheckSV(string MSSV)
+        public List<SinhVien> ListSV = new List<SinhVien>();
+        public SinhVien CheckSV(string MSSV)
         {
             foreach (SinhVien sv in ListSV)
             {
@@ -24,96 +25,52 @@ namespace QuanLiSinhVien.Managers
             return null;
         }
 
-        public static void AddStudent(string MaLop)
+
+
+        public void AddStudent()
         {
-            string MSSV;
-            string MaNghanh;
-            string HoTen;
-            string GioiTinh;
-            string DiaChi;
-            int Tuoi;
-            SinhVien sv;
 
-            do
-            {
-                Console.Write("Ma so sinh vien: ");
-                MSSV = Console.ReadLine();
+        }
 
-                sv = ManagerSinhVien.CheckSV(MSSV);
+        public void DelStudent()
+        {
 
-                if (sv != null)
-                {
-                    Console.WriteLine("Ma so sinh vien da ton tai, vui long nhap lai!");
-                }
-            } while (sv != null);
+        }
 
-            Console.Write("Nhap ho ten: ");
-            HoTen = Console.ReadLine();
-
-            Console.Write("Nhap gioi tinh: ");
-            GioiTinh = Console.ReadLine();
-
-            Console.Write("Nhap ma nganh: ");
-            MaNghanh = Console.ReadLine();
-
-            Console.Write("Nhap dia chi: ");
-            DiaChi = Console.ReadLine();
-
-            Console.Write("Nhap ma nganh: ");
-            Tuoi = int.Parse(Console.ReadLine());
-
-            sv = new SinhVien(HoTen, DiaChi, GioiTinh, Tuoi, MSSV, MaNghanh, MaLop);
+        public void NhapDSSinhVien()
+        {
+            SinhVien sv  = new SinhVien();
+            sv.NhapTT1SinhVien();
             ListSV.Add(sv);
-
-            if (ManagerLOP.CheckLop(MaLop) != null)
-            {
-                ManagerLOP.CheckLop(MaLop).ListSV1.Add(sv);
-            }
-
         }
 
-        public static void DelStudent(LOP lop)
+        public void XuatDSSinhVien()
         {
-            string MSSV;
-            SinhVien sv;
-            do
+            Console.WriteLine("\nMSSV\tHo ten\t\tTuoi\tGioi tinh\tMa lop\tMa nghanh\tDTB\tKet qua\n");
+            foreach (SinhVien sv in ListSV)
             {
-                Console.Write("Nhap ma so sinh vien can xoa: ");
-                MSSV = Console.ReadLine();
-
-                sv = CheckSV(MSSV);
-
-                // Check mssv xem có tồn tại sv hay không, nếu có thì xóa
-                if (sv == null)
-                {
-                    Console.WriteLine("Ma so sinh vien khong ton tai, vui long nhap lai!");
-                }
-                else
-                {
-                    ListSV.Remove(sv);
-                    lop.ListSV1.Remove(sv);
-                    Console.WriteLine("Xoa sinh vien thanh cong!");
-                }
-            } while (sv == null);
-
+                sv.XuatTT1SinhVien();
+            }
         }
 
-        public static void display(LOP lop)
+        public void DocFileDSSV(string file)
         {
-            int check = 0;
-            Console.WriteLine("Ten lop: {0}", lop.TenLop1);
-            Console.WriteLine("MSSV\t|\tMa nghanh\t|\tHo ten\t|\tGioi tinh\t|\tMa lop\t|\tDia chi\t|\tTuoi|");
-            foreach (SinhVien sv in lop.ListSV1)
+            XmlDocument read = new XmlDocument();
+            read.Load(file);
+            XmlNodeList nodeList = read.SelectNodes("/DSSV/SinhVien");
+            foreach (XmlNode node in nodeList)
             {
-                check++;
-                Console.WriteLine("{0}\t|\t{1}\t|\t{2}\t|\t{3}\t|\t{4}\t|\t{5}\t|\t{6}|", sv.MSSV1, sv.MaNghanh1, sv.Ten1, sv.GioiTinh1, lop.MaLop1, sv.DiaChi1, sv.Tuoi1);
-            }
-            if (check == 0)
-            {
-                Console.WriteLine("Lop trong!");
+                SinhVien sv = new SinhVien();
+                sv.Ten1 = node["HoTen"].InnerText;
+                sv.Tuoi1 = int.Parse(node["Tuoi"].InnerText);
+                sv.GioiTinh1 = node["GioiTinh"].InnerText;
+                sv.MSSV1 = node["MSSV"].InnerText;
+                sv.MaLop1 = node["MaLop"].InnerText;
+                sv.MaNghanh1 = node["MaNghanh"].InnerText;
+                sv.DTB1 = float.Parse(node["DiemTB"].InnerText);
+                ListSV.Add(sv);
             }
         }
-
     }
 
 }

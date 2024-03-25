@@ -2,13 +2,12 @@
 <DSSV>
 	<SinhVien>
 		<HoTen>Nguyen Van A</HoTen>
-		<MSSV>SV01</MSSV>
-		<GioiTinh>Nam</GioiTinh>
 		<Tuoi>18</Tuoi>
+		<GioiTinh>Nam</GioiTinh>
+		<MSSV>SV01</MSSV>
 		<MaLop>Lop001</MaLop>
 		<MaNghanh>CNTT</MaNghanh>
-		<DiaChi>TP.HCM</DiaChi>
-		<TenLop>DHTH06</TenLop>
+		<DiemTB>3,9</DiemTB>
 	</SinhVien>
 
 	<SinhVien>
@@ -18,8 +17,7 @@
 		<Tuoi>18</Tuoi>
 		<MaLop>Lop001</MaLop>
 		<MaNghanh>CNTT</MaNghanh>
-		<DiaChi>TP.HCM</DiaChi>
-		<TenLop>DHTH06</TenLop>
+		<DiemTB>6,3</DiemTB>
 	</SinhVien>
 
 	<SinhVien>
@@ -29,8 +27,7 @@
 		<Tuoi>18</Tuoi>
 		<MaLop>Lop001</MaLop>
 		<MaNghanh>CNTT</MaNghanh>
-		<DiaChi>TP.HCM</DiaChi>
-		<TenLop>DHTH06</TenLop>
+		<DiemTB>8,2</DiemTB>
 	</SinhVien>
 
 	<SinhVien>
@@ -40,8 +37,7 @@
 		<Tuoi>19</Tuoi>
 		<MaLop>Lop001</MaLop>
 		<MaNghanh>CNTT</MaNghanh>
-		<DiaChi>TP.HCM</DiaChi>
-		<TenLop>DHTH06</TenLop>
+		<DiemTB>7,8</DiemTB>
 	</SinhVien>
 
 	<SinhVien>
@@ -51,10 +47,9 @@
 		<Tuoi>19</Tuoi>
 		<MaLop>Lop001</MaLop>
 		<MaNghanh>CNTT</MaNghanh>
-		<DiaChi>TP.HCM</DiaChi>
-		<TenLop>DHTH06</TenLop>
+		<DiemTB>8,6</DiemTB>
 	</SinhVien>
-	
+
 	<SinhVien>
 		<HoTen>Nguyen Van G</HoTen>
 		<MSSV>SV06</MSSV>
@@ -62,7 +57,7 @@
 		<Tuoi>19</Tuoi>
 		<MaLop>Lop001</MaLop>
 		<MaNghanh>CNTT</MaNghanh>
-		<DiaChi>TP.HCM</DiaChi>
-		<TenLop>DHTH06</TenLop>
+		<DiemTB>6,5</DiemTB>
 	</SinhVien>
 </DSSV>
+

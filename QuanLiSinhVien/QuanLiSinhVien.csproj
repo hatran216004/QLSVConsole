@@ -43,20 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\KHOA.cs" />
-    <Compile Include="Classes\LOP.cs" />
-    <Compile Include="Classes\NIENKHOA.cs" />
+    <Compile Include="Classes\Courses.cs" />
     <Compile Include="Classes\PERSON.cs" />
-    <Compile Include="Managers\ManagerLOP.cs" />
-    <Compile Include="Managers\ManagerKHOA.cs" />
-    <Compile Include="Managers\ManagerNIENKHOA.cs" />
     <Compile Include="Managers\ManagerSinhVien.cs" />
+    <Compile Include="Managers\Registration .cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\SinhVien.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="filesXML\DanhSachSinhVien.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,22 +8,30 @@ namespace QuanLiSinhVien.Classes
 {
     class Person
     {
-        protected string Ten, DiaChi, GioiTinh;
+        protected string Ten, GioiTinh;
         protected int Tuoi;
 
         public string Ten1 { get => Ten; set => Ten = value; }
-        public string DiaChi1 { get => DiaChi; set => DiaChi = value; }
         public string GioiTinh1 { get => GioiTinh; set => GioiTinh = value; }
         public int Tuoi1 { get => Tuoi; set => Tuoi = value; }
 
         public Person() { }
 
-        public Person(string ten, string diaChi, string gioiTinh, int tuoi)
+        public Person(string pTen, string pGioiTinh, int pTuoi)
         {
-            Ten = ten;
-            DiaChi = diaChi;
-            GioiTinh = gioiTinh;
-            Tuoi = tuoi;
+            Ten = pTen;
+            GioiTinh = pGioiTinh;
+            Tuoi = pTuoi;
+        }
+
+        protected void NhapThongTin()
+        {
+            Console.Write("Ho ten: ");
+            Ten = Console.ReadLine();
+            Console.Write("Gioi tinh: ");
+            GioiTinh = Console.ReadLine();
+            Console.Write("Tuoi: ");
+            Tuoi = int.Parse(Console.ReadLine());
         }
     }
 }
