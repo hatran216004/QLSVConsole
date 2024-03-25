@@ -46,6 +46,8 @@
     <Compile Include="Classes\Courses.cs" />
     <Compile Include="Classes\PERSON.cs" />
     <Compile Include="Managers\ManagerCourses.cs" />
+    <Compile Include="Classes\Points.cs" />
+    <Compile Include="Managers\ManagerPoints.cs" />
     <Compile Include="Managers\ManagerSinhVien.cs" />
     <Compile Include="Managers\Registration .cs" />
     <Compile Include="Program.cs" />

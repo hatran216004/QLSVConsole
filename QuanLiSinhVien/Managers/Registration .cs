@@ -52,6 +52,33 @@ namespace QuanLiSinhVien.Managers
             // Nếu không tìm thấy sinh viên có mã sinh viên trùng khớp
             Console.WriteLine("Khong tim thay sinh vien co ma: {0}", studentID);
         }
+
+        public static void CancelRegisterCourse(SinhVien student, Course course)
+        {
+            // Kiểm tra xem sinh viên có trong danh sách đăng ký không
+            if (registrations.ContainsKey(student))
+            {
+                // Lấy danh sách môn học đã đăng ký của sinh viên
+                var courses = registrations[student];
+
+                // Kiểm tra xem môn học cần hủy đăng ký có trong danh sách không
+                if (courses.Contains(course))
+                {
+                    // Hủy đăng ký môn học
+                    courses.Remove(course);
+                    Console.WriteLine("Da huy dang ky mon hoc {0} cua sinh vien: {1}", course.TenMonHoc1, student.Ten1);
+                }
+                else
+                {
+                    Console.WriteLine("Sinh vien {0} chua dang ky mon hoc: {1}", student.Ten1, course.TenMonHoc1);
+                }
+            }
+            else
+            {
+                Console.WriteLine("Sinh vien {0} chua dang ky bat ky mon hoc nao.", student.Ten1);
+            }
+        }
+
     }
 
 }
