@@ -9,7 +9,7 @@
 		<MaNghanh>CNTT</MaNghanh>
 		<DiemToan>6,3</DiemToan>
 		<DiemAnh>9,8</DiemAnh>
-		<DiemOOP>9</DiemOOP>
+		<DiemVan>9</DiemVan>
 	</SinhVien>
 
 	<SinhVien>
@@ -21,7 +21,7 @@
 		<MaNghanh>CNTT</MaNghanh>
 		<DiemToan>6,3</DiemToan>
 		<DiemAnh>9,8</DiemAnh>
-		<DiemOOP>9</DiemOOP>
+		<DiemVan>9</DiemVan>
 	</SinhVien>
 
 	<SinhVien>
@@ -33,7 +33,7 @@
 		<MaNghanh>CNTT</MaNghanh>
 		<DiemToan>3</DiemToan>
 		<DiemAnh>3,5</DiemAnh>
-		<DiemOOP>3,8</DiemOOP>
+		<DiemVan>3,8</DiemVan>
 	</SinhVien>
 
 	<SinhVien>
@@ -45,7 +45,7 @@
 		<MaNghanh>CNTT</MaNghanh>
 		<DiemToan>8</DiemToan>
 		<DiemAnh>8,3</DiemAnh>
-		<DiemOOP>8,5</DiemOOP>
+		<DiemVan>8,5</DiemVan>
 	</SinhVien>
 
 	<SinhVien>
@@ -57,7 +57,7 @@
 		<MaNghanh>CNTT</MaNghanh>
 		<DiemToan>7</DiemToan>
 		<DiemAnh>7</DiemAnh>
-		<DiemOOP>7</DiemOOP>
+		<DiemVan>7</DiemVan>
 	</SinhVien>
 
 	<SinhVien>
@@ -69,7 +69,7 @@
 		<MaNghanh>CNTT</MaNghanh>
 		<DiemToan>7</DiemToan>
 		<DiemAnh>8</DiemAnh>
-		<DiemOOP>8,5</DiemOOP>
+		<DiemVan>8,5</DiemVan>
 	</SinhVien>
 
 	<SinhVien>
@@ -81,7 +81,43 @@
 		<MaNghanh>CNDM</MaNghanh>
 		<DiemToan>2</DiemToan>
 		<DiemAnh>4</DiemAnh>
-		<DiemOOP>1</DiemOOP>
+		<DiemVan>1</DiemVan>
+	</SinhVien>
+
+	<SinhVien>
+		<HoTen>Tran Bao Anh</HoTen>
+		<MSSV>SV08</MSSV>
+		<GioiTinh>Nu</GioiTinh>
+		<Tuoi>19</Tuoi>
+		<MaLop>Lop002</MaLop>
+		<MaNghanh>KDQT</MaNghanh>
+		<DiemToan>6</DiemToan>
+		<DiemAnh>7</DiemAnh>
+		<DiemVan>8</DiemVan>
+	</SinhVien>
+
+	<SinhVien>
+		<HoTen>Pham Van A</HoTen>
+		<MSSV>SV09</MSSV>
+		<GioiTinh>Nam</GioiTinh>
+		<Tuoi>21</Tuoi>
+		<MaLop>Lop003</MaLop>
+		<MaNghanh>QTKD</MaNghanh>
+		<DiemToan>5</DiemToan>
+		<DiemAnh>7</DiemAnh>
+		<DiemVan>5</DiemVan>
+	</SinhVien>
+
+	<SinhVien>
+		<HoTen>Nguyen Anh Thu</HoTen>
+		<MSSV>SV010</MSSV>
+		<GioiTinh>Nu</GioiTinh>
+		<Tuoi>19</Tuoi>
+		<MaLop>Lop004</MaLop>
+		<MaNghanh>KDTQ</MaNghanh>
+		<DiemToan>8</DiemToan>
+		<DiemAnh>9</DiemAnh>
+		<DiemVan>8</DiemVan>
 	</SinhVien>
 </DSSV>
 

@@ -49,6 +49,7 @@ namespace QuanLiSinhVien
             base.NhapThongTin();
             Console.Write("Ma so sinh vien: ");
             MSSV = Console.ReadLine();
+
             Console.Write("Ma nghanh: ");
             MaNghanh = Console.ReadLine();
             Console.Write("Ma lop: ");
@@ -58,9 +59,9 @@ namespace QuanLiSinhVien
             float DToanCC = float.Parse(Console.ReadLine());
             Console.Write("Nhap diem Anh");
             float DAnh = float.Parse(Console.ReadLine());
-            Console.Write("Nhap diem OOP");
-            float DOOP = float.Parse(Console.ReadLine());
-            Points managerPoints = new Points(DToanCC, DAnh, DOOP);
+            Console.Write("Nhap diem Van");
+            float DVan = float.Parse(Console.ReadLine());
+            Points managerPoints = new Points(DToanCC, DAnh, DVan);
             DTB = managerPoints.DiemTrungBinh();
         }
 

@@ -10,11 +10,11 @@ namespace QuanLiSinhVien.Managers
     {
         float DToanCC; // Điểm toán cao cấp 
         float DAnh; // Điểm anh
-        float DOOP; // Điểm OOP
+        float DVan; // Điểm OOP
 
         public float DToanCC1 { get => DToanCC; set => DToanCC = value; }
         public float DAnh1 { get => DAnh; set => DAnh = value; }
-        public float DOOP1 { get => DOOP; set => DOOP = value; }
+        public float DVan1 { get => DVan; set => DVan = value; }
 
         public Points() { }
 
@@ -22,12 +22,12 @@ namespace QuanLiSinhVien.Managers
         {
             DToanCC = pDToanCC;
             DAnh = pDAnh;
-            DOOP = pDOOP;
+            DVan = pDOOP;
         }
 
         public float DiemTrungBinh()
         {
-            return (DToanCC + DAnh + DOOP) / 3;
+            return (DToanCC + DAnh + DVan) / 3;
         }
 
         public void GanDiemTrungBinhChoSinhVien()

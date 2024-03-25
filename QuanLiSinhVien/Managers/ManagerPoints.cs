@@ -29,8 +29,8 @@ namespace QuanLiSinhVien.Managers
                             if (mssv == p.MSSV1)
                             {
                                 checkSV = true;
-                                Console.WriteLine("\nMSSV\tHo ten\t\tTuoi\tGioi tinh\tMa lop\tMa nghanh\tToan\tAnh\tOOP\n");
-                                Console.WriteLine("{0}\t{1}\t{2}\t{3}\t\t{4}\t{5}\t\t{6}\t{7}\t{8}", sv.MSSV1, sv.Ten1, sv.Tuoi1, sv.GioiTinh1, sv.MaLop1, sv.MaNghanh1, p.DToanCC1, p.DAnh1, p.DOOP1);
+                                Console.WriteLine("\nMSSV\tHo ten\t\tTuoi\tGioi tinh\tMa lop\tMa nghanh\tToan\tAnh\tVan\n");
+                                Console.WriteLine("{0}\t{1}\t{2}\t{3}\t\t{4}\t{5}\t\t{6}\t{7}\t{8}", sv.MSSV1, sv.Ten1, sv.Tuoi1, sv.GioiTinh1, sv.MaLop1, sv.MaNghanh1, p.DToanCC1, p.DAnh1, p.DVan1);
                             }
                         }
                     }

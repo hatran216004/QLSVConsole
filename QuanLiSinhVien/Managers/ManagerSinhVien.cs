@@ -61,13 +61,13 @@ namespace QuanLiSinhVien.Managers
             float DAnh = float.Parse(Console.ReadLine());
             points.DAnh1 = DAnh;
 
-            Console.Write("Nhap diem OOP: ");
-            float DOOP = float.Parse(Console.ReadLine());
-            points.DOOP1 = DOOP;
+            Console.Write("Nhap diem Van: ");
+            float DVan = float.Parse(Console.ReadLine());
+            points.DVan1 = DVan;
 
             points.MSSV1 = student.MSSV1;
 
-            Points managerPoints = new Points(DToanCC, DAnh, DOOP);
+            Points managerPoints = new Points(DToanCC, DAnh, DVan);
             student.DTB1 = managerPoints.DiemTrungBinh();
 
 
@@ -130,15 +130,15 @@ namespace QuanLiSinhVien.Managers
 
                 float DToanCC = float.Parse(node["DiemToan"].InnerText);
                 float DAnh = float.Parse(node["DiemAnh"].InnerText);
-                float DOOP = float.Parse(node["DiemOOP"].InnerText);
+                float DVan = float.Parse(node["DiemVan"].InnerText);
 
                 points.DToanCC1 = DToanCC;
                 points.DAnh1 = DAnh;
-                points.DOOP1 = DOOP;
+                points.DVan1 = DVan;
                 points.MSSV1 = sv.MSSV1;
                 ManagerPoints.listPoints.Add(points);
 
-                Points managerPoints = new Points(DToanCC, DAnh, DOOP);
+                Points managerPoints = new Points(DToanCC, DAnh, DVan);
                 sv.DTB1 = managerPoints.DiemTrungBinh();
 
                 ListSV.Add(sv);
@@ -199,9 +199,9 @@ namespace QuanLiSinhVien.Managers
                                 Console.WriteLine("4. Ma nghanh");
                                 Console.WriteLine("5. Tuoi");
                                 Console.WriteLine("6. Gioi tinh");
-                                Console.WriteLine("7. Diem toan cao cap");
-                                Console.WriteLine("8. Diem anh");
-                                Console.WriteLine("9. Diem OOP");
+                                Console.WriteLine("7. Diem Toan cao cap");
+                                Console.WriteLine("8. Diem Anh");
+                                Console.WriteLine("9. Diem Van");
 
                                 Console.Write("Chon thong tin can sua: ");
                                 options = int.Parse(Console.ReadLine());
@@ -266,9 +266,9 @@ namespace QuanLiSinhVien.Managers
                                         }
                                     case 9:
                                         {
-                                            Console.Write("Nhap diem OOP moi: ");
-                                            p.DOOP1 = float.Parse(Console.ReadLine());
-                                            Console.WriteLine("Da sua diem OOP thanh cong!");
+                                            Console.Write("Nhap diem Van moi: ");
+                                            p.DVan1 = float.Parse(Console.ReadLine());
+                                            Console.WriteLine("Da sua diem Van thanh cong!");
                                             break;
                                         }
                                     default:
