@@ -70,7 +70,6 @@ namespace QuanLiSinhVien.Managers
             Points managerPoints = new Points(DToanCC, DAnh, DVan);
             student.DTB1 = managerPoints.DiemTrungBinh();
 
-
             ManagerPoints.listPoints.Add(points);
             ListSV.Add(student);
             Console.WriteLine("Them sinh vien {0} thanh cong!", student.Ten1);

@@ -13,9 +13,9 @@ namespace QuanLiSinhVien
         static void Main(string[] args)
         {
             ManagerSinhVien ds = new ManagerSinhVien();
-            ds.DocFileDSSV("C:\\Users\\ADMIN\\OneDrive\\Documents\\Project_school\\C#\\QuanLiSinhVien\\QuanLiSinhVien\\filesXML\\DanhSachSinhVien.xml");
+            ds.DocFileDSSV("..\\..\\filesXML\\DanhSachSinhVien.xml");
             ManagerCourses courses = new ManagerCourses();
-            courses.DocFileDSMonHoc("C:\\Users\\ADMIN\\OneDrive\\Documents\\Project_school\\C#\\QuanLiSinhVien\\QuanLiSinhVien\\filesXML\\DanhSachMonHoc.xml");
+            courses.DocFileDSMonHoc("..\\..\\filesXML\\DanhSachMonHoc.xml");
 
             int options;
             do

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DSSV>
+	<SinhVien>
+		<HoTen>Nguyen Van A</HoTen>
+		<MSSV>SV01</MSSV>
+		<GioiTinh>Nam</GioiTinh>
+		<Tuoi>18</Tuoi>
+		<MaLop>Lop001</MaLop>
+		<MaNghanh>CNTT</MaNghanh>
+		<DiaChi>TP.HCM</DiaChi>
+		<TenLop>DHTH06</TenLop>
+	</SinhVien>
+
+	<SinhVien>
+		<HoTen>Nguyen Van B</HoTen>
+		<MSSV>SV02</MSSV>
+		<GioiTinh>Nu</GioiTinh>
+		<Tuoi>18</Tuoi>
+		<MaLop>Lop001</MaLop>
+		<MaNghanh>CNTT</MaNghanh>
+		<DiaChi>TP.HCM</DiaChi>
+		<TenLop>DHTH06</TenLop>
+	</SinhVien>
+
+	<SinhVien>
+		<HoTen>Nguyen Van C</HoTen>
+		<MSSV>SV03</MSSV>
+		<GioiTinh>Nam</GioiTinh>
+		<Tuoi>18</Tuoi>
+		<MaLop>Lop001</MaLop>
+		<MaNghanh>CNTT</MaNghanh>
+		<DiaChi>TP.HCM</DiaChi>
+		<TenLop>DHTH06</TenLop>
+	</SinhVien>
+
+	<SinhVien>
+		<HoTen>Nguyen Van D</HoTen>
+		<MSSV>SV04</MSSV>
+		<GioiTinh>Nu</GioiTinh>
+		<Tuoi>19</Tuoi>
+		<MaLop>Lop001</MaLop>
+		<MaNghanh>CNTT</MaNghanh>
+		<DiaChi>TP.HCM</DiaChi>
+		<TenLop>DHTH06</TenLop>
+	</SinhVien>
+
+	<SinhVien>
+		<HoTen>Nguyen Van E</HoTen>
+		<MSSV>SV05</MSSV>
+		<GioiTinh>Nua</GioiTinh>
+		<Tuoi>19</Tuoi>
+		<MaLop>Lop001</MaLop>
+		<MaNghanh>CNTT</MaNghanh>
+		<DiaChi>TP.HCM</DiaChi>
+		<TenLop>DHTH06</TenLop>
+	</SinhVien>
+	
+	<SinhVien>
+		<HoTen>Nguyen Van G</HoTen>
+		<MSSV>SV06</MSSV>
+		<GioiTinh>Nam</GioiTinh>
+		<Tuoi>19</Tuoi>
+		<MaLop>Lop001</MaLop>
+		<MaNghanh>CNTT</MaNghanh>
+		<DiaChi>TP.HCM</DiaChi>
+		<TenLop>DHTH06</TenLop>
+	</SinhVien>
+</DSSV>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DSLop>
+	<Lop>
+		<MaLop>Lop001</MaLop>
+		<TenLop>TH01</TenLop>
+		<MaKhoa>CNTT</MaKhoa>
+	</Lop>
+
+	<Lop>
+		<MaLop>Lop002</MaLop>
+		<TenLop>TH02</TenLop>
+		<MaKhoa>CNTP</MaKhoa>
+	</Lop>
+
+	<Lop>
+		<MaLop>Lop003</MaLop>
+		<TenLop>TH03</TenLop>
+		<MaKhoa>CNTT</MaKhoa>
+	</Lop>
+</DSLop>
