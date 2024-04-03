@@ -9,7 +9,6 @@ namespace QuanLiSinhVien.Managers
 {
     class ManagerSinhVien
     {
-        //  Biến tĩnh list sv lưu các obj SinhVien
         public static List<SinhVien> ListSV = new List<SinhVien>();
 
         public void AddStudent()
@@ -68,7 +67,7 @@ namespace QuanLiSinhVien.Managers
             points.MSSV1 = student.MSSV1;
 
             Points managerPoints = new Points(DToanCC, DAnh, DVan);
-            student.DTB1 = managerPoints.DiemTrungBinh();
+            student.DTB1 = points.DiemTrungBinh();
 
             ManagerPoints.listPoints.Add(points);
             ListSV.Add(student);
@@ -95,16 +94,16 @@ namespace QuanLiSinhVien.Managers
                     }
                 }
 
-                if(!checkSV)
+                if (!checkSV)
                 {
                     Console.WriteLine("Sinh vien khong ton tai!");
-                } 
+                }
             } while (!checkSV);
         }
 
         public void XuatDSSinhVien()
         {
-            Console.WriteLine("\nMSSV\tHo ten\t\t\tTuoi\tGioi tinh\tMa lop\tMa nghanh\tDTB\tKet qua\n");
+            Console.WriteLine("\nMSSV\tHo ten\t\t\tTuoi\tGioi tinh\tMa lop\tMa nghanh\tDTB\tKet qua\t\tXep loai\n");
             foreach (SinhVien sv in ListSV)
             {
                 sv.XuatTT1SinhVien();
@@ -153,18 +152,18 @@ namespace QuanLiSinhVien.Managers
         {
             List<SinhVien> List1 = new List<SinhVien>();
             List<SinhVien> List2 = new List<SinhVien>();
-            List1 = ListSV.Where(t => t.KetQua() == true).ToList();
-            List2 = ListSV.Where(t => t.KetQua() == false).ToList();
+            List1 = ListSV.Where(t => t.KetQua == "Dau").ToList();
+            List2 = ListSV.Where(t => t.KetQua == "Tach").ToList();
 
             Console.WriteLine("\n\t\t\t------------------ Danh sach sinh vien qua mon ------------------\n");
-            Console.WriteLine("\nMSSV\tHo ten\t\t\tTuoi\tGioi tinh\tMa lop\tMa nghanh\tDTB\tKet qua\n");
+            Console.WriteLine("\nMSSV\tHo ten\t\t\tTuoi\tGioi tinh\tMa lop\tMa nghanh\tDTB\tKet qua\t\tXep loai\n");
             foreach (SinhVien sv in List1)
             {
                 sv.XuatTT1SinhVien();
             }
 
             Console.WriteLine("\n\t\t\t------------------ Danh sach sinh vien tach mon ------------------\n");
-            Console.WriteLine("\nMSSV\tHo ten\t\t\tTuoi\tGioi tinh\tMa lop\tMa nghanh\tDTB\tKet qua\n");
+            Console.WriteLine("\nMSSV\tHo ten\t\t\tTuoi\tGioi tinh\tMa lop\tMa nghanh\tDTB\tKet qua\t\tXep loai\n");
             foreach (SinhVien sv in List2)
             {
                 sv.XuatTT1SinhVien();
@@ -185,9 +184,9 @@ namespace QuanLiSinhVien.Managers
                 {
                     if (mssv == sv.MSSV1)
                     {
-                       foreach(Points p in ManagerPoints.listPoints)
+                        foreach (Points p in ManagerPoints.listPoints)
                         {
-                            if(mssv == p.MSSV1)
+                            if (mssv == p.MSSV1)
                             {
                                 int options;
                                 Console.WriteLine("\n\t\t\t------------------ Edit thong tin sinh vien {0} ------------------\n", sv.Ten1);
@@ -202,7 +201,7 @@ namespace QuanLiSinhVien.Managers
                                 Console.WriteLine("8. Diem Anh");
                                 Console.WriteLine("9. Diem Van");
 
-                                Console.Write("Chon thong tin can sua: ");
+                                Console.Write("Nhap lua chon: ");
                                 options = int.Parse(Console.ReadLine());
 
                                 switch (options)

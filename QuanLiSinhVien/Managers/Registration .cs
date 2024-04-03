@@ -12,7 +12,7 @@ namespace QuanLiSinhVien.Managers
         public static Dictionary<SinhVien, List<Course>> registrations = new Dictionary<SinhVien, List<Course>>();
 
         // Đăng ký môn học cho một sinh viên
-        public static void RegisterCourse(SinhVien student, Course course)
+        public void RegisterCourse(SinhVien student, Course course)
         {
             // Kiểm tra xem sinh viên đã có trong danh sách đăng ký chưa
             if (!registrations.ContainsKey(student))
@@ -40,11 +40,12 @@ namespace QuanLiSinhVien.Managers
                 if (student.MSSV1 == studentID)
                 {
                     Console.WriteLine("----------- Cac mon sinh vien {0} da dang ky -----------", student.Ten1);
-                    Console.WriteLine("Ma mon hoc\t\tTen mon hoc");
-                    foreach (var course in courses)
+                    Console.WriteLine("Ma mon hoc\tTen mon hoc\t\t\tGia\n");
+                    foreach (Course course in courses)
                     {
-                        Console.WriteLine("{0}\t\t\t{1}", course.MaMonHoc1, course.TenMonHoc1);
+                        Console.WriteLine("{0}\t\t{1, -20}\t\t{2} VND", course.MaMonHoc1, course.TenMonHoc1, course.Price1);
                     }
+                    Console.WriteLine("\nTong: {0} VND", courses.Sum(t => t.Price1));
                     return;
                 }
             }
@@ -53,7 +54,7 @@ namespace QuanLiSinhVien.Managers
             Console.WriteLine("Khong tim thay sinh vien co ma: {0}", studentID);
         }
 
-        public static void CancelRegisterCourse(SinhVien student, Course course)
+        public void CancelRegisterCourse(SinhVien student, Course course)
         {
             // Kiểm tra xem sinh viên có trong danh sách đăng ký không
             if (registrations.ContainsKey(student))

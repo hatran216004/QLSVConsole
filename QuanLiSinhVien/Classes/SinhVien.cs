@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace QuanLiSinhVien
 {
-     class SinhVien : Person
+    class SinhVien : Person
     {
         string MSSV;
         string MaNghanh;
@@ -20,23 +20,49 @@ namespace QuanLiSinhVien
         public string MaNghanh1 { get => MaNghanh; set => MaNghanh = value; }
         public string MaLop1 { get => MaLop; set => MaLop = value; }
         public float DTB1 { get => DTB; set => DTB = value; }
-        public bool KetQua()
-        { 
-            if(DTB >= DiemChuan)
+        public string KetQua
+        {
+            get
+            {
+                if (DTB >= DiemChuan)
                 {
-                    return true;
+                    return "Dau";
                 }
                 else
                 {
-                    return false;
+                    return "Tach";
                 }
+            }
+        }
+
+        public string XepLoai
+        {
+            get
+            {
+                if (DTB >= 8)
+                {
+                    return "Gioi";
+                }
+                else if (DTB >= 7)
+                {
+                    return "Kha";
+                }
+                else if (DTB >= 6)
+                {
+                    return "Trung Binh";
+                }
+                else
+                {
+                    return "Yeu";
+                }
+            }
         }
 
         public SinhVien()
         {
         }
 
-        public SinhVien(string HoTen, string GioiTinh, int Tuoi,  string pMSSV, string pMaNghanh, string pMaLop, float pDTB) : base(HoTen, GioiTinh, Tuoi)
+        public SinhVien(string HoTen, string GioiTinh, int Tuoi, string pMSSV, string pMaNghanh, string pMaLop, float pDTB) : base(HoTen, GioiTinh, Tuoi)
         {
             MSSV = pMSSV;
             MaNghanh = pMaNghanh;
@@ -44,7 +70,7 @@ namespace QuanLiSinhVien
             DTB = pDTB;
         }
 
-        public void NhapTT1SinhVien()
+        public override void NhapThongTin()
         {
             base.NhapThongTin();
             Console.Write("Ma so sinh vien: ");
@@ -55,7 +81,7 @@ namespace QuanLiSinhVien
             Console.Write("Ma lop: ");
             MaLop = Console.ReadLine();
 
-            Console.Write("Nhap diem Toan CC");
+            Console.Write("Nhap diem Toan cao cap");
             float DToanCC = float.Parse(Console.ReadLine());
             Console.Write("Nhap diem Anh");
             float DAnh = float.Parse(Console.ReadLine());
@@ -67,16 +93,7 @@ namespace QuanLiSinhVien
 
         public void XuatTT1SinhVien()
         {
-            string result;
-            if(this.KetQua())
-            {
-                result = "Qua mon";
-            }
-            else
-            {
-                result = "Tach";
-            }
-            Console.WriteLine("{0}\t{1}\t\t{2}\t{3}\t\t{4}\t{5}\t\t{6:0.0}\t{7}", MSSV, Ten, Tuoi, GioiTinh, MaLop, MaNghanh , DTB, result);
+            Console.WriteLine("{0}\t{1}\t\t{2}\t{3}\t\t{4}\t{5}\t\t{6:0.0}\t{7}\t\t{8}", MSSV, Ten, Tuoi, GioiTinh, MaLop, MaNghanh, DTB, KetQua, XepLoai);
         }
     }
 }

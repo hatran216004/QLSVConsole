@@ -1,37 +1,87 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <DSMonHoc>
-	<MonHoc>
-		<TenMonHoc>ReactJS</TenMonHoc>
-		<MaMonHoc>C001</MaMonHoc>
-	</MonHoc>
-	
-	<MonHoc>
-		<TenMonHoc>AngularJS</TenMonHoc>
-		<MaMonHoc>C001</MaMonHoc>
-	</MonHoc>
-	
-	<MonHoc>
-		<TenMonHoc>VueJS</TenMonHoc>
-		<MaMonHoc>C001</MaMonHoc>
-	</MonHoc>
-	
-	<MonHoc>
-		<TenMonHoc>MongoDB</TenMonHoc>
-		<MaMonHoc>D001</MaMonHoc>
-	</MonHoc>
+	<LapTrinhWeb>
+		<MonHoc>
+			<TenMonHoc>ReactJS</TenMonHoc>
+			<MaMonHoc>LTW001</MaMonHoc>
+			<Price>1.460.000</Price>
+		</MonHoc>
 
-	<MonHoc>
-		<TenMonHoc>MySQL</TenMonHoc>
-		<MaMonHoc>D001</MaMonHoc>
-	</MonHoc>
-	
-	<MonHoc>
-		<TenMonHoc>HTML CSS</TenMonHoc>
-		<MaMonHoc>A001</MaMonHoc>
-	</MonHoc>
+		<MonHoc>
+			<TenMonHoc>AngularJS</TenMonHoc>
+			<MaMonHoc>LTW002</MaMonHoc>
+			<Price>1.460.000</Price>
+		</MonHoc>
 
-	<MonHoc>
-		<TenMonHoc>Node and ExpressJS</TenMonHoc>
-		<MaMonHoc>B001</MaMonHoc>
-	</MonHoc>
+		<MonHoc>
+			<TenMonHoc>VueJS</TenMonHoc>
+			<MaMonHoc>LTW003</MaMonHoc>
+			<Price>1.460.000</Price>
+		</MonHoc>
+
+		<MonHoc>
+			<TenMonHoc>MongoDB</TenMonHoc>
+			<MaMonHoc>LTW004</MaMonHoc>
+			<Price>2.160.000</Price>
+		</MonHoc>
+
+		<MonHoc>
+			<TenMonHoc>MySQL</TenMonHoc>
+			<MaMonHoc>LTW005</MaMonHoc>
+			<Price>2.160.000</Price>
+		</MonHoc>
+
+		<MonHoc>
+			<TenMonHoc>HTML CSS</TenMonHoc>
+			<MaMonHoc>LTW006</MaMonHoc>
+			<Price>1.299.000</Price>
+		</MonHoc>
+
+		<MonHoc>
+			<TenMonHoc>Node and ExpressJS</TenMonHoc>
+			<MaMonHoc>LTW007</MaMonHoc>
+			<Price>1.299.000</Price>
+		</MonHoc>
+	</LapTrinhWeb>
+
+	<NgoaiNgu>
+		<MonHoc>
+			<TenMonHoc>Anh van so cap</TenMonHoc>
+			<MaMonHoc>NN00</MaMonHoc>
+			<Price>2.160.000</Price>
+		</MonHoc>
+		<MonHoc>
+			<TenMonHoc>Anh van 1</TenMonHoc>
+			<MaMonHoc>NN01</MaMonHoc>
+			<Price>2.160.000</Price>
+		</MonHoc>
+		<MonHoc>
+			<TenMonHoc>Anh van 2</TenMonHoc>
+			<MaMonHoc>NN02</MaMonHoc>
+			<Price>2.160.000</Price>
+		</MonHoc>
+		<MonHoc>
+			<TenMonHoc>Anh van 3</TenMonHoc>
+			<MaMonHoc>NN03</MaMonHoc>
+			<Price>2.160.000</Price>
+		</MonHoc>
+	</NgoaiNgu>
+
+	<Toan>
+		<MonHoc>
+			<TenMonHoc>Toan cao cap A2-C2</TenMonHoc>
+			<MaMonHoc>TCC01</MaMonHoc>
+			<Price>1.460.000</Price>
+		</MonHoc>
+		<MonHoc>
+			<TenMonHoc>Xac xuat thong ke</TenMonHoc>
+			<MaMonHoc>TCC02</MaMonHoc>
+			<Price>1.460.000</Price>
+		</MonHoc>
+		<MonHoc>
+			<TenMonHoc>Giai tich</TenMonHoc>
+			<MaMonHoc>TCC03</MaMonHoc>
+			<Price>1.460.000</Price>
+		</MonHoc>
+	</Toan>
 </DSMonHoc>

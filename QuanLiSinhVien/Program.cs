@@ -29,7 +29,7 @@ namespace QuanLiSinhVien
                 Console.WriteLine("6. Xoa sinh vien");
                 Console.WriteLine("7. Sap xep sinh vien DTB tang dan");
                 Console.WriteLine("8. Xuat thong tin diem sinh vien cac mon hoc");
-                Console.WriteLine("9. Loc tat ca sinh vien qua mon");
+                Console.WriteLine("9. Loc tat ca sinh vien qua & tach mon");
                 Console.WriteLine("10. Sua thong tin sinh vien");
                 Console.WriteLine("\n------------------ End ------------------\n");
                 Console.Write("Nhap lua chon: ");
@@ -48,8 +48,7 @@ namespace QuanLiSinhVien
                             Console.Write("Nhap ma so sinh vien can dang ky: ");
                             mssv = Console.ReadLine();
 
-                            ManagerCourses newCourses = new ManagerCourses();
-                            newCourses.XuatDanhSachMonHoc();
+                            courses.XuatDanhSachMonHoc();
                             string selectedCourse;
                             bool checkCourse = false;
                             bool checkSV = false;
@@ -58,28 +57,36 @@ namespace QuanLiSinhVien
                             {
                                 if (mssv == sv.MSSV1)
                                 {
-                                    checkSV = true;
-                                    Console.Write("\nNhap ten mon hoc can dang ky: ");
-                                    selectedCourse = Console.ReadLine();
-
-                                    foreach (Course course in ManagerCourses.ListCourse)
+                                    string a;
+                                    do
                                     {
-                                        if (course.TenMonHoc1 == selectedCourse)
+                                        checkSV = true;
+                                        Console.Write("\nNhap ten mon hoc can dang ky: ");
+                                        selectedCourse = Console.ReadLine();
+
+                                        foreach (Course course in courses.ListCourse)
                                         {
-                                            checkCourse = true;
-                                            Registration.RegisterCourse(sv, course);
+                                            if (course.TenMonHoc1 == selectedCourse)
+                                            {
+                                                checkCourse = true;
+                                                Registration registration = new Registration();
+                                                registration.RegisterCourse(sv, course);
+                                            }
                                         }
-                                    }
 
-                                    if (!checkCourse)
-                                    {
-                                        Console.WriteLine("Mon hoc khong ton tai!");
-                                        break;
-                                    }
-                                    else
-                                    {
-                                        Console.WriteLine("Dang ky thanh cong!");
-                                    }
+                                        if (!checkCourse)
+                                        {
+                                            Console.WriteLine("Mon hoc khong ton tai!");
+                                            break;
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine("Dang ky thanh cong!");
+                                        }
+
+                                        Console.WriteLine("Ban muon tiep tuc dang ky ? Co / Khong");
+                                        a = Console.ReadLine();
+                                    } while (a == "Co");
                                 }
                             }
 
@@ -115,12 +122,13 @@ namespace QuanLiSinhVien
                                     Console.Write("\nNhap ten mon hoc muon huy dang ky: ");
                                     selectedCourse = Console.ReadLine();
 
-                                    foreach (Course course in ManagerCourses.ListCourse)
+                                    foreach (Course course in courses.ListCourse)
                                     {
                                         if (course.TenMonHoc1 == selectedCourse)
                                         {
                                             checkCourse = true;
-                                            Registration.CancelRegisterCourse(sv, course);
+                                            Registration registration = new Registration();
+                                            registration.CancelRegisterCourse(sv, course);
                                         }
                                     }
 
@@ -175,8 +183,6 @@ namespace QuanLiSinhVien
                         break;
                 }
             } while (true);
-
-            Console.ReadLine();
         }
 
     }

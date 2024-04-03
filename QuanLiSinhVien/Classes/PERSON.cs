@@ -24,7 +24,7 @@ namespace QuanLiSinhVien.Classes
             Tuoi = pTuoi;
         }
 
-        protected void NhapThongTin()
+        public virtual void NhapThongTin()
         {
             Console.Write("Ho ten: ");
             Ten = Console.ReadLine();
