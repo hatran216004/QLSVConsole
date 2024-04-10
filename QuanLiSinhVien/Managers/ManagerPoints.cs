@@ -23,7 +23,7 @@ namespace QuanLiSinhVien.Managers
                 {
                     if (mssv == sv.MSSV1)
                     {
-                        foreach (Points p in ManagerPoints.listPoints)
+                        foreach (Points p in listPoints)
                         {
 
                             if (mssv == p.MSSV1)

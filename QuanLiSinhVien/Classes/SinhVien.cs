@@ -47,7 +47,7 @@ namespace QuanLiSinhVien
                 {
                     return "Kha";
                 }
-                else if (DTB >= 6)
+                else if (DTB >= 5)
                 {
                     return "Trung Binh";
                 }

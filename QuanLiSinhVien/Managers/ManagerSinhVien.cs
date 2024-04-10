@@ -279,6 +279,8 @@ namespace QuanLiSinhVien.Managers
                         }
 
                         checkSV = true;
+                        Console.WriteLine("\nMSSV\tHo ten\t\t\tTuoi\tGioi tinh\tMa lop\tMa nghanh\tDTB\tKet qua\t\tXep loai\n");
+                        sv.XuatTT1SinhVien();
                         break; // Kết thúc vòng lặp khi tìm thấy sinh viên cần sửa
                     }
                 }

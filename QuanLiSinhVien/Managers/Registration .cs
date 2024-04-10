@@ -9,7 +9,7 @@ namespace QuanLiSinhVien.Managers
 {
     class Registration // Đăng ký môn học
     {
-        public static Dictionary<SinhVien, List<Course>> registrations = new Dictionary<SinhVien, List<Course>>();
+        public Dictionary<SinhVien, List<Course>> registrations = new Dictionary<SinhVien, List<Course>>();
 
         // Đăng ký môn học cho một sinh viên
         public void RegisterCourse(SinhVien student, Course course)
@@ -26,7 +26,7 @@ namespace QuanLiSinhVien.Managers
         }
 
 
-        public static void InDanhSachMHDangKy(string studentID)
+        public void InDanhSachMHDangKy(string studentID)
         {
             foreach (var pair in registrations)
             {

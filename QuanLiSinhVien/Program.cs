@@ -13,9 +13,10 @@ namespace QuanLiSinhVien
         static void Main(string[] args)
         {
             ManagerSinhVien ds = new ManagerSinhVien();
-            ds.DocFileDSSV("..\\..\\filesXML\\DanhSachSinhVien.xml");
+            ds.DocFileDSSV("../../filesXML/DanhSachSinhVien.xml");
             ManagerCourses courses = new ManagerCourses();
-            courses.DocFileDSMonHoc("..\\..\\filesXML\\DanhSachMonHoc.xml");
+            courses.DocFileDSMonHoc("../../filesXML//DanhSachMonHoc.xml");
+            Registration registration = new Registration();
 
             int options;
             do
@@ -69,7 +70,6 @@ namespace QuanLiSinhVien
                                             if (course.TenMonHoc1 == selectedCourse)
                                             {
                                                 checkCourse = true;
-                                                Registration registration = new Registration();
                                                 registration.RegisterCourse(sv, course);
                                             }
                                         }
@@ -101,7 +101,7 @@ namespace QuanLiSinhVien
                             string mssv;
                             Console.Write("Nhap ma so sinh vien: ");
                             mssv = Console.ReadLine();
-                            Registration.InDanhSachMHDangKy(mssv);
+                            registration.InDanhSachMHDangKy(mssv);
                             break;
                         }
                     case 4:
@@ -127,7 +127,6 @@ namespace QuanLiSinhVien
                                         if (course.TenMonHoc1 == selectedCourse)
                                         {
                                             checkCourse = true;
-                                            Registration registration = new Registration();
                                             registration.CancelRegisterCourse(sv, course);
                                         }
                                     }
@@ -176,7 +175,6 @@ namespace QuanLiSinhVien
                     case 10:
                         {
                             ds.EditInfoStudent();
-                            ds.XuatDSSinhVien();
                             break;
                         }
                     default:
