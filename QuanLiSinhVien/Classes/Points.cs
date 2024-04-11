@@ -29,10 +29,5 @@ namespace QuanLiSinhVien.Managers
         {
             return (DToanCC + DAnh + DVan) / 3;
         }
-
-        public void GanDiemTrungBinhChoSinhVien()
-        {
-            base.DTB1 = DiemTrungBinh();
-        }
     }
 }

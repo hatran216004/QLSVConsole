@@ -12,6 +12,7 @@ namespace QuanLiSinhVien
     {
         static void Main(string[] args)
         {
+            ManagerPoints mp = new ManagerPoints();
             ManagerSinhVien ds = new ManagerSinhVien();
             ds.DocFileDSSV("../../filesXML/DanhSachSinhVien.xml");
             ManagerCourses courses = new ManagerCourses();
@@ -32,6 +33,7 @@ namespace QuanLiSinhVien
                 Console.WriteLine("8. Xuat thong tin diem sinh vien cac mon hoc");
                 Console.WriteLine("9. Loc tat ca sinh vien qua & tach mon");
                 Console.WriteLine("10. Sua thong tin sinh vien");
+                Console.WriteLine("11. Tim kiem sinh vien");
                 Console.WriteLine("\n------------------ End ------------------\n");
                 Console.Write("Nhap lua chon: ");
                 options = int.Parse(Console.ReadLine());
@@ -163,7 +165,6 @@ namespace QuanLiSinhVien
                         }
                     case 8:
                         {
-                            ManagerPoints mp = new ManagerPoints();
                             mp.ShowPointsStudents();
                             break;
                         }
@@ -175,6 +176,28 @@ namespace QuanLiSinhVien
                     case 10:
                         {
                             ds.EditInfoStudent();
+                            break;
+                        }
+                    case 11:
+                        {
+                            string mssv;
+                            SinhVien sinhVien = new SinhVien();
+                            do
+                            {
+                                Console.Write("\nNhap ma so sinh vien: ");
+                                mssv = Console.ReadLine();
+                                sinhVien = ds.TimKiemSinhVien(mssv);
+                                if (sinhVien != null)
+                                {
+                                    Console.WriteLine("\nMSSV\tHo ten\t\t\tTuoi\tGioi tinh\tMa lop\tMa nghanh\tDTB\tKet qua\t\tXep loai\n");
+                                    sinhVien.XuatTT1SinhVien();
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Vui long nhaop dung ma so sinh vien!");
+                                }
+
+                            } while (sinhVien == null);
                             break;
                         }
                     default:

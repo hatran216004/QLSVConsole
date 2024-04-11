@@ -135,9 +135,7 @@ namespace QuanLiSinhVien.Managers
                 points.DVan1 = DVan;
                 points.MSSV1 = sv.MSSV1;
                 ManagerPoints.listPoints.Add(points);
-
-                Points managerPoints = new Points(DToanCC, DAnh, DVan);
-                sv.DTB1 = managerPoints.DiemTrungBinh();
+                sv.DTB1 = points.DiemTrungBinh();
 
                 ListSV.Add(sv);
             }
@@ -291,6 +289,20 @@ namespace QuanLiSinhVien.Managers
                 }
 
             } while (!checkSV);
+        }
+
+        public SinhVien TimKiemSinhVien(string mssv)
+        {
+
+            foreach (SinhVien sv in ListSV)
+            {
+                if (sv.MSSV1 == mssv)
+                {
+                    return sv;
+                }
+            }
+            return null;
+
         }
     }
 
