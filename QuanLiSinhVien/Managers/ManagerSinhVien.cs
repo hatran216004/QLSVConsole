@@ -53,20 +53,16 @@ namespace QuanLiSinhVien.Managers
             student.MaLop1 = Console.ReadLine();
 
             Console.Write("Nhap diem Toan cao cap: ");
-            float DToanCC = float.Parse(Console.ReadLine());
-            points.DToanCC1 = DToanCC;
+            points.DToanCC1 = float.Parse(Console.ReadLine());
 
             Console.Write("Nhap diem Anh: ");
-            float DAnh = float.Parse(Console.ReadLine());
-            points.DAnh1 = DAnh;
+            points.DAnh1 = float.Parse(Console.ReadLine());
 
             Console.Write("Nhap diem Van: ");
-            float DVan = float.Parse(Console.ReadLine());
-            points.DVan1 = DVan;
+            points.DVan1 = float.Parse(Console.ReadLine());
 
-            points.MSSV1 = student.MSSV1;
+            points.MSSV2 = student.MSSV1;
 
-            Points managerPoints = new Points(DToanCC, DAnh, DVan);
             student.DTB1 = points.DiemTrungBinh();
 
             ManagerPoints.listPoints.Add(points);
@@ -133,7 +129,7 @@ namespace QuanLiSinhVien.Managers
                 points.DToanCC1 = DToanCC;
                 points.DAnh1 = DAnh;
                 points.DVan1 = DVan;
-                points.MSSV1 = sv.MSSV1;
+                points.MSSV2 = sv.MSSV1;
                 ManagerPoints.listPoints.Add(points);
                 sv.DTB1 = points.DiemTrungBinh();
 
@@ -184,7 +180,7 @@ namespace QuanLiSinhVien.Managers
                     {
                         foreach (Points p in ManagerPoints.listPoints)
                         {
-                            if (mssv == p.MSSV1)
+                            if (mssv == p.MSSV2)
                             {
                                 int options;
                                 Console.WriteLine("\n\t\t\t------------------ Edit thong tin sinh vien {0} ------------------\n", sv.Ten1);

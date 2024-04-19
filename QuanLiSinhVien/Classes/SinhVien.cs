@@ -16,7 +16,33 @@ namespace QuanLiSinhVien
         float DTB;
         public static float DiemChuan = 4;
 
-        public string MSSV1 { get => MSSV; set => MSSV = value; }
+        public string MSSV1
+        {
+            get => MSSV;
+
+            set
+            {
+                bool isValid = false;
+                for (int i = 2; i < value.Length; i++)
+                {
+                    if (!char.IsDigit(value[i]))
+                    {
+                        isValid = true;
+                        break;
+                    }
+                }
+
+                if (isValid && !value.StartsWith("SV"))
+                {
+                    MSSV = "SV00";
+                }
+                else
+                {
+                    MSSV = value;
+                }
+            }
+        }
+
         public string MaNghanh1 { get => MaNghanh; set => MaNghanh = value; }
         public string MaLop1 { get => MaLop; set => MaLop = value; }
         public float DTB1 { get => DTB; set => DTB = value; }
@@ -87,7 +113,7 @@ namespace QuanLiSinhVien
             float DAnh = float.Parse(Console.ReadLine());
             Console.Write("Nhap diem Van");
             float DVan = float.Parse(Console.ReadLine());
-            Points managerPoints = new Points(DToanCC, DAnh, DVan);
+            Points managerPoints = new Points(DToanCC, DAnh, DVan, MSSV);
             DTB = managerPoints.DiemTrungBinh();
         }
 

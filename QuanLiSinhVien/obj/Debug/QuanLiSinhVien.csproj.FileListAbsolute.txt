@@ -19,3 +19,10 @@ C:\Documents\School\C#\QuanLiSinhVien\QuanLiSinhVien\obj\Debug\QuanLiSinhVien.cs
 C:\Documents\School\C#\QuanLiSinhVien\QuanLiSinhVien\obj\Debug\QuanLiSinhVien.csproj.CoreCompileInputs.cache
 C:\Documents\School\C#\QuanLiSinhVien\QuanLiSinhVien\obj\Debug\QuanLiSinhVien.exe
 C:\Documents\School\C#\QuanLiSinhVien\QuanLiSinhVien\obj\Debug\QuanLiSinhVien.pdb
+C:\Documents\School\C#\DoAnOOP\QuanLiSinhVien\QuanLiSinhVien\obj\Debug\QuanLiSinhVien.csproj.AssemblyReference.cache
+C:\Documents\School\C#\DoAnOOP\QuanLiSinhVien\QuanLiSinhVien\obj\Debug\QuanLiSinhVien.csproj.CoreCompileInputs.cache
+C:\Documents\School\C#\DoAnOOP\QuanLiSinhVien\QuanLiSinhVien\obj\Debug\QuanLiSinhVien.exe
+C:\Documents\School\C#\DoAnOOP\QuanLiSinhVien\QuanLiSinhVien\obj\Debug\QuanLiSinhVien.pdb
+C:\Documents\School\C#\DoAnOOP\QuanLiSinhVien\QuanLiSinhVien\bin\Debug\QuanLiSinhVien.exe.config
+C:\Documents\School\C#\DoAnOOP\QuanLiSinhVien\QuanLiSinhVien\bin\Debug\QuanLiSinhVien.exe
+C:\Documents\School\C#\DoAnOOP\QuanLiSinhVien\QuanLiSinhVien\bin\Debug\QuanLiSinhVien.pdb

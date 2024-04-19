@@ -26,7 +26,7 @@ namespace QuanLiSinhVien.Managers
                         foreach (Points p in listPoints)
                         {
 
-                            if (mssv == p.MSSV1)
+                            if (mssv == p.MSSV2)
                             {
                                 checkSV = true;
                                 Console.WriteLine("\nMSSV\tHo ten\t\tTuoi\tGioi tinh\tMa lop\tMa nghanh\tToan\tAnh\tVan\n");

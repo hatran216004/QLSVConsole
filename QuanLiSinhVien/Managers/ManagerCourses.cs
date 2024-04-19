@@ -58,12 +58,12 @@ namespace QuanLiSinhVien.Managers
             int options;
             do
             {
-                Console.WriteLine("\n--------------- Phan loai mon hoc ---------------\n");
+                Console.WriteLine("\n--------------- Phan loai va xem thong tin mon hoc ---------------\n");
                 Console.WriteLine("\n1. Lap trinh web");
                 Console.WriteLine("2. Ngoai ngu");
                 Console.WriteLine("3. Toan");
                 Console.WriteLine("4. Xuat danh sach tat ca mon hoc");
-                Console.WriteLine("5. Exit");
+                Console.WriteLine("5. Thoat va dang ky");
 
 
                 Console.Write("Nhap lua chon: ");
